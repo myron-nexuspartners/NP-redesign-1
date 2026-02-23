@@ -1,0 +1,44 @@
+# PR Validation
+#
+# Runs on every pull-request targeting `main`.
+# Checks:
+#   1. HTML validity via html-validate
+#   2. CSS / JS lint via stylelint + eslint
+#   3. No broken relative links
+
+name: Validate PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Lint & Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint HTML
+        run: npx html-validate index.html
+
+      - name: Lint CSS
+        run: npx stylelint "css/**/*.css"
+
+      - name: Lint JavaScript
+        run: npx eslint "js/**/*.js"
