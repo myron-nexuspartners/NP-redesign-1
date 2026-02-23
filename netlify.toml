@@ -1,18 +1,45 @@
-# Nexus Partners — Netlify Configuration
-# Deploy by connecting this repo to Netlify.
-# No build command needed — this is a static HTML site.
+headersOrigin = "config"
+redirectsOrigin = "config"
+plugins = []
+
+[functions]
+
+  [functions."*"]
 
 [build]
-  publish = "."       # root is the publish directory
+publish = "/opt/build/repo"
+publishOrigin = "config"
+
+  [build.environment]
+
+  [build.processing]
+
+    [build.processing.css]
+
+    [build.processing.html]
+
+    [build.processing.images]
+
+    [build.processing.js]
+
+  [build.services]
 
 [[headers]]
-  for = "/*"
+for = "/*"
+
   [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
+  X-Frame-Options = "DENY"
+  X-Content-Type-Options = "nosniff"
+  Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
-  from = "/index.html"
-  to = "/"
-  status = 301
+from = "/index.html"
+to = "/"
+status = 301
+force = false
+
+  [redirects.query]
+
+  [redirects.conditions]
+
+  [redirects.headers]
