@@ -57,12 +57,19 @@
       var btn = document.getElementById('submitBtn');
       btn.textContent = 'Sending…';
       btn.disabled = true;
-      // Replace this timeout with your actual form submission (Netlify Forms, etc.)
-      setTimeout(function () {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+      .then(function () {
         btn.textContent = 'Message Sent ✓';
         btn.style.background = '#1a6b3a';
+      })
+      .catch(function () {
+        btn.textContent = 'Try Again — Submission Failed';
         btn.disabled = false;
-      }, 1400);
+      });
     });
   }
 
