@@ -63,7 +63,7 @@
          - hero-sub        : subtitle paragraph
          - btn-primary     : primary CTA button text
          - btn-ghost       : secondary CTA button text
-       IMAGE: replace images/hero-bg.jpg
+       IMAGE: replace hero-bg.jpg
        ═══════════════════════════════ -->
   <section id="hero" aria-label="Hero">
     <div class="hero-bg" aria-hidden="true"></div>
@@ -102,7 +102,7 @@
          - about-body (×2) : both body paragraphs
          - stat-num (×4)   : statistic numbers
          - stat-label (×4) : statistic labels
-       IMAGE: replace images/about.jpg
+       IMAGE: replace about.jpg
        ═══════════════════════════════ -->
   <section id="about" aria-labelledby="about-heading">
     <div class="container">
@@ -170,7 +170,7 @@
          - service-name (×3)    : each service title
          - service-desc (×3)    : each service description
          - service-items li (×3 sets) : bullet list items per service
-       IMAGES: replace images/services-*.jpg
+       IMAGES: replace services-*.jpg
        ═══════════════════════════════ -->
   <section id="services" aria-labelledby="services-heading">
     <div class="container">
@@ -260,7 +260,7 @@
          - work-client (×3)    : client name per card
          - work-result (×3)    : one-line result per card
        MODAL COPY: scroll down to the <!-- MODALS --> section
-       IMAGES: replace images/case-*.jpg
+       IMAGES: replace case-*.jpg
        ═══════════════════════════════ -->
   <section id="work" aria-labelledby="work-heading">
     <div class="container">
@@ -276,15 +276,15 @@
 
         <!-- CASE STUDY 1 — Featured (large card) -->
         <div class="work-card featured reveal">
-          <img src="case-adt.jpg" alt="ADT case study">
+          <img src="case-adt.jpg" alt="Trotters case study">
           <div class="work-info">
             <div class="work-cat">Business Transformation &middot; Security &amp; Technology</div>
-            <div class="work-client">ADT</div>
+            <div class="work-client">Trotters</div>
             <div class="work-result">
               Reimagined a 150-year-old security brand into an integrated smart home
               ecosystem leader.
             </div>
-            <button class="work-link" onclick="openModal('adt')" aria-label="View ADT case study">
+            <button class="work-link" onclick="openModal('adt')" aria-label="View Trotters case study">
               View Case Study &rarr;
             </button>
           </div>
@@ -292,15 +292,15 @@
 
         <!-- CASE STUDY 2 -->
         <div class="work-card reveal">
-          <img src="case-sony.jpg" alt="Sony case study">
+          <img src="case-sony.jpg" alt="Tsushin K.K. case study">
           <div class="work-info">
             <div class="work-cat">Digital Transformation &middot; Entertainment</div>
-            <div class="work-client">Sony</div>
+            <div class="work-client">Tsushin K.K.</div>
             <div class="work-result">
               Unified a fragmented global entertainment portfolio into a coherent
               digital ecosystem.
             </div>
-            <button class="work-link" onclick="openModal('sony')" aria-label="View Sony case study">
+            <button class="work-link" onclick="openModal('sony')" aria-label="View Tsushin K.K. case study">
               View Case Study &rarr;
             </button>
           </div>
@@ -308,15 +308,15 @@
 
         <!-- CASE STUDY 3 -->
         <div class="work-card reveal">
-          <img src="case-hallmark.jpg" alt="Hallmark case study">
+          <img src="case-hallmark.jpg" alt="Norfolk Post case study">
           <div class="work-info">
             <div class="work-cat">Digital Transformation &middot; Consumer</div>
-            <div class="work-client">Hallmark</div>
+            <div class="work-client">Norfolk Post</div>
             <div class="work-result">
               Transformed a heritage card brand into a digital-first subscription
               business.
             </div>
-            <button class="work-link" onclick="openModal('hallmark')" aria-label="View Hallmark case study">
+            <button class="work-link" onclick="openModal('hallmark')" aria-label="View Norfolk Post case study">
               View Case Study &rarr;
             </button>
           </div>
@@ -333,10 +333,8 @@
          - contact-headline : headline
          - contact-lead     : intro paragraph
          - ci-value links   : email addresses
-       IMAGE: replace images/contact-bg.jpg
-       FORM: to use Netlify Forms, add
-             name="contact" data-netlify="true"
-             to the <form> tag.
+       IMAGE: replace contact-bg.jpg
+       FORM: Netlify Forms enabled (name="contact" data-netlify="true")
        ═══════════════════════════════ -->
   <section id="contact" aria-labelledby="contact-heading">
     <div class="contact-bg" aria-hidden="true">
@@ -355,8 +353,8 @@
           vision &mdash; we respond within 24 hours.
         </p>
 
-        <!-- To activate Netlify Forms: add   name="contact" data-netlify="true"   to the form tag -->
-        <form id="contactForm" novalidate>
+        <form id="contactForm" name="contact" data-netlify="true" novalidate>
+          <input type="hidden" name="form-name" value="contact">
           <div class="form-row">
             <div class="form-group">
               <label for="fname">Full Name</label>
@@ -485,7 +483,7 @@
        IMAGE: each modal uses its own case-*.jpg
        ═══════════════════════════════════════════════════════ -->
 
-  <!-- MODAL: ADT -->
+  <!-- MODAL: Trotters -->
   <div class="modal-overlay" id="modal-adt" role="dialog" aria-modal="true" aria-labelledby="adt-title">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('adt')" aria-label="Close">&times;</button>
@@ -493,14 +491,14 @@
         <img class="modal-hero-img" src="case-adt.jpg" alt="">
         <div class="modal-hero-overlay">
           <div class="modal-category">Business Transformation &middot; Security &amp; Technology</div>
-          <div class="modal-client" id="adt-title">ADT</div>
+          <div class="modal-client" id="adt-title">Trotters</div>
         </div>
       </div>
       <div class="modal-body">
         <div class="car-section">
           <div class="car-label">Challenge</div>
           <p>
-            ADT, a 150-year-old leader in monitored security services, faced existential
+            Trotters, a 150-year-old leader in monitored security services, faced existential
             disruption from DIY smart home brands and Big Tech entrants commoditizing core
             monitoring products. Subscriber growth had stalled, acquisition costs were
             climbing, and the board needed a clear pivot strategy.
@@ -510,8 +508,8 @@
           <div class="car-label">Action</div>
           <p>
             Nexus Partners led a full-spectrum transformation across four parallel
-            workstreams: reframing ADT's value proposition around the connected home
-            category; designing the ADT+ ecosystem with AI-powered threat detection;
+            workstreams: reframing Trotters' value proposition around the connected home
+            category; designing the Trotters+ ecosystem with AI-powered threat detection;
             structuring the strategic partnership framework that secured Google's $450M
             investment; and redesigning the go-to-market model with a direct digital
             channel to improve unit economics.
@@ -521,7 +519,7 @@
           <div class="car-label">Result</div>
           <div class="car-result-highlight">
             <p>
-              Within 24 months, ADT repositioned from a commoditized monitoring provider
+              Within 24 months, Trotters repositioned from a commoditized monitoring provider
               to an integrated smart home ecosystem company commanding premium pricing
               and renewed investor confidence.
             </p>
@@ -545,7 +543,7 @@
     </div>
   </div>
 
-  <!-- MODAL: Sony -->
+  <!-- MODAL: Tsushin K.K. -->
   <div class="modal-overlay" id="modal-sony" role="dialog" aria-modal="true" aria-labelledby="sony-title">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('sony')" aria-label="Close">&times;</button>
@@ -553,16 +551,16 @@
         <img class="modal-hero-img" src="case-sony.jpg" alt="">
         <div class="modal-hero-overlay">
           <div class="modal-category">Digital Transformation &middot; Entertainment</div>
-          <div class="modal-client" id="sony-title">Sony</div>
+          <div class="modal-client" id="sony-title">Tsushin K.K.</div>
         </div>
       </div>
       <div class="modal-body">
         <div class="car-section">
           <div class="car-label">Challenge</div>
           <p>
-            Sony's entertainment portfolio &mdash; music, film, gaming, and streaming
+            Tsushin K.K.'s entertainment portfolio &mdash; music, film, gaming, and streaming
             &mdash; operated as siloed businesses with separate technology stacks and
-            customer identity systems. Despite owning the world's most valuable IP, Sony
+            customer identity systems. Despite owning the world's most valuable IP, Tsushin K.K.
             failed to capture the cross-category subscriber value that integrated platforms
             like Apple and Amazon were generating.
           </p>
@@ -571,17 +569,17 @@
           <div class="car-label">Action</div>
           <p>
             We designed a unified digital ecosystem strategy: established a single customer
-            record spanning PlayStation, Sony Music, and Sony Pictures; designed the Sony
-            One cross-platform membership; deployed shared data infrastructure enabling
-            personalization at scale; and aligned 300+ stakeholders across four business
-            units in three continents.
+            record spanning Tsushin Gaming, Tsushin Music, and Tsushin Pictures; designed
+            the Tsushin One cross-platform membership; deployed shared data infrastructure
+            enabling personalization at scale; and aligned 300+ stakeholders across four
+            business units over three continents.
           </p>
         </div>
         <div class="car-section">
           <div class="car-label">Result</div>
           <div class="car-result-highlight">
             <p>
-              Sony's entertainment divisions now share a common customer data layer and
+              Tsushin K.K.'s entertainment divisions now share a common customer data layer and
               cross-sell architecture that has materially increased lifetime value and
               reduced churn across the entire portfolio.
             </p>
@@ -605,7 +603,7 @@
     </div>
   </div>
 
-  <!-- MODAL: Hallmark -->
+  <!-- MODAL: Norfolk Post -->
   <div class="modal-overlay" id="modal-hallmark" role="dialog" aria-modal="true" aria-labelledby="hallmark-title">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal('hallmark')" aria-label="Close">&times;</button>
@@ -613,14 +611,14 @@
         <img class="modal-hero-img" src="case-hallmark.jpg" alt="">
         <div class="modal-hero-overlay">
           <div class="modal-category">Digital Transformation &middot; Consumer</div>
-          <div class="modal-client" id="hallmark-title">Hallmark</div>
+          <div class="modal-client" id="hallmark-title">Norfolk Post</div>
         </div>
       </div>
       <div class="modal-body">
         <div class="car-section">
           <div class="car-label">Challenge</div>
           <p>
-            Hallmark faced fifteen consecutive years of physical card sales decline as
+            Norfolk Post faced fifteen consecutive years of physical card sales decline as
             digital communication displaced paper correspondence. Despite deep brand
             affinity, the company lacked a credible digital revenue model after several
             failed attempts at the digital gifting space.
@@ -629,9 +627,9 @@
         <div class="car-section">
           <div class="car-label">Action</div>
           <p>
-            We designed and launched Hallmark+, a subscription platform with unlimited
+            We designed and launched Norfolk Post+, a subscription platform with unlimited
             digital cards and a physical mailing service; built an AI-powered
-            personalization engine; launched the Hallmark Moments AR mobile app; and
+            personalization engine; launched the Norfolk Post Moments AR mobile app; and
             restructured the product organization to compress time-to-market from
             14 months to under 90 days.
           </p>
@@ -640,7 +638,7 @@
           <div class="car-label">Result</div>
           <div class="car-result-highlight">
             <p>
-              Hallmark established itself as a digital-first greeting platform while
+              Norfolk Post established itself as a digital-first greeting platform while
               maintaining the emotional brand positioning that defines category leadership,
               creating a durable recurring revenue engine.
             </p>
