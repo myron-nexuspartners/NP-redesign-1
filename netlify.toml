@@ -7,7 +7,8 @@ plugins = []
   [functions."*"]
 
 [build]
-publish = "/opt/build/repo"
+publish = "."
+command = ""
 publishOrigin = "config"
 
   [build.environment]

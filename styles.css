@@ -122,7 +122,7 @@ body {
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('../images/hero-bg.jpg');
+  background-image: url('hero-bg.jpg');
   background-size: cover; background-position: center 30%;
   animation: kenBurns 18s ease-in-out infinite alternate;
 }
