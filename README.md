@@ -4,28 +4,26 @@ A static HTML website deployable on GitHub + Netlify.
 
 ## Folder Structure
 
+All files live at the **repo root** (no subdirectories):
+
 ```
 nexus-partners-site/
-├── index.html          ← MAIN FILE — all page copy lives here
-├── css/
-│   └── styles.css      ← All styles, colors, spacing, fonts
-├── js/
-│   └── main.js         ← Interactivity (nav, modals, form, animations)
-├── images/
-│   ├── hero-bg.jpg         Hero section background
-│   ├── about.jpg           About section image
-│   ├── services-business.jpg
-│   ├── services-digital.jpg
-│   ├── services-org.jpg
-│   ├── case-adt.jpg        ADT case study
-│   ├── case-sony.jpg       Sony case study
-│   ├── case-hallmark.jpg   Hallmark case study
-│   ├── contact-bg.jpg      Contact section background
-│   ├── logo.svg            Main logo (nav + footer)
-│   ├── favicon.png         Browser tab icon
-│   └── logos/              Full logo kit (LinkedIn, letterhead, etc.)
-├── netlify.toml        ← Netlify deployment settings
-└── README.md           ← This file
+├── index.html              ← MAIN FILE — all page copy lives here
+├── styles.css              ← All styles, colors, fonts
+├── main.js                 ← Interactivity (nav, modals, form, animations)
+├── hero-bg.jpg             Hero section background
+├── about.jpg               About section image
+├── services-business.jpg
+├── services-digital.jpg
+├── services-org.jpg
+├── case-adt.jpg            ADT case study
+├── case-sony.jpg           Sony case study
+├── case-hallmark.jpg       Hallmark case study
+├── contact-bg.jpg          Contact section background
+├── logo.svg                Main logo (nav + footer)
+├── favicon.png             Browser tab icon
+├── netlify.toml            ← Netlify deployment settings
+└── README.md               ← This file
 ```
 
 ## Editing Copy
@@ -61,7 +59,7 @@ All text is in **`index.html`**. Look for the `═══` comment banners — ea
 
 ## Changing Brand Colors
 
-Open **`css/styles.css`** and edit the `:root` block at the top:
+Open **`styles.css`** and edit the `:root` block at the top:
 
 ```css
 :root {
@@ -74,7 +72,7 @@ Open **`css/styles.css`** and edit the `:root` block at the top:
 
 ## Replacing Images
 
-Drop new images into the `images/` folder using the same filenames, or update the `src` attributes in `index.html`.
+Drop new images into the repo root using the same filenames, or update the `src` attributes in `index.html`.
 
 Recommended sizes:
 - `hero-bg.jpg` — 1920×1080px minimum

@@ -1,46 +1,16 @@
-headersOrigin = "config"
-redirectsOrigin = "config"
-plugins = []
-
-[functions]
-
-  [functions."*"]
-
 [build]
-publish = "."
-command = ""
-publishOrigin = "config"
-
-  [build.environment]
-
-  [build.processing]
-
-    [build.processing.css]
-
-    [build.processing.html]
-
-    [build.processing.images]
-
-    [build.processing.js]
-
-  [build.services]
+  publish = "."
+  command = ""
 
 [[headers]]
-for = "/*"
-
+  for = "/*"
   [headers.values]
-  X-Frame-Options = "DENY"
-  X-Content-Type-Options = "nosniff"
-  Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
-from = "/index.html"
-to = "/"
-status = 301
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = false
